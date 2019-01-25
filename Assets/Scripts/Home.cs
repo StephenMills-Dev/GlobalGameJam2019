@@ -7,20 +7,27 @@ public class Home : MonoBehaviour {
     public enum Color
     {
         Red,
-        Black,
+        Green,
         Blue,
         Yellow,
-        Green,
-        White
+        White,
+        Black
     };
-    public Color selector;
-    string _colour;
+    public Color cSelector;
+    public enum Size
+    {
+        House,
+        Apartment
+    };
+    public Size sSelector;
+    public string _colour;
     public int Number;
-    public string Size;
+    public string _size;
     public string Location;
 
     private void Start()
     {
-        _colour = selector.ToString();
+        _colour = cSelector.ToString();
+        _size = sSelector.ToString();
     }
 }
