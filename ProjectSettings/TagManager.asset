@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Clue
+  - Heartbeat
+  - Red
+  - Blue
+  - Green
+  - Yellow
+  - Black
+  - White
+  - Number
+  - House
+  - Apartment
+  - Home
   layers:
   - Default
   - TransparentFX
