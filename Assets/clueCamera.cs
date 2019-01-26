@@ -67,6 +67,20 @@ public class clueCamera : MonoBehaviour
                     //Find the Specular shader and change its Color to red
                     rend.material.shader = Shader.Find("Specular");
                     rend.material.SetColor("_SpecColor", Color.black);
+
+                    GameObject[] possibleValues = GameObject.FindGameObjectsWithTag(clueController.targetHome._colour);
+                    foreach(GameObject g in possibleValues)
+                    {
+                        g.transform.GetChild(0).gameObject.SetActive(false);
+                    }
+
+                }
+                else if (hit.transform.gameObject.tag == clueController.targetHome._size)
+                {
+                    if(clueController.targetHome._size == "House")
+                    key.GetComponent<MeshFilter>().sharedMesh = key.GetComponent<keyMeshes>().keys[0];
+                    else
+                        key.GetComponent<MeshFilter>().sharedMesh = key.GetComponent<keyMeshes>().keys[1];
                 }
             }
             else

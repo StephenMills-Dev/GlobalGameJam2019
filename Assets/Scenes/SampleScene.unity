@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 48749101}
   - component: {fileID: 48749100}
   - component: {fileID: 48749099}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere (6)
   m_TagString: Number
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 79263749}
   - component: {fileID: 79263748}
   - component: {fileID: 79263747}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere (9)
   m_TagString: Number
   m_Icon: {fileID: 0}
@@ -460,7 +460,7 @@ GameObject:
   - component: {fileID: 143202051}
   - component: {fileID: 143202050}
   - component: {fileID: 143202049}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere (12)
   m_TagString: House
   m_Icon: {fileID: 0}
@@ -546,7 +546,7 @@ GameObject:
   - component: {fileID: 158094617}
   - component: {fileID: 158094616}
   - component: {fileID: 158094615}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere (10)
   m_TagString: Number
   m_Icon: {fileID: 0}
@@ -923,6 +923,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1732441390552402, guid: 3933b246cd5a7554da5bba4e6805659d, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3933b246cd5a7554da5bba4e6805659d, type: 2}
   m_IsPrefabParent: 0
@@ -964,6 +968,10 @@ Prefab:
     - target: {fileID: 4532959922948802, guid: 3933b246cd5a7554da5bba4e6805659d, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732441390552402, guid: 3933b246cd5a7554da5bba4e6805659d, type: 2}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3933b246cd5a7554da5bba4e6805659d, type: 2}
@@ -1412,7 +1420,7 @@ GameObject:
   - component: {fileID: 474361209}
   - component: {fileID: 474361208}
   - component: {fileID: 474361207}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere (11)
   m_TagString: Number
   m_Icon: {fileID: 0}
@@ -1525,6 +1533,10 @@ Prefab:
     - target: {fileID: 4532959922948802, guid: 3933b246cd5a7554da5bba4e6805659d, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732441390552402, guid: 3933b246cd5a7554da5bba4e6805659d, type: 2}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3933b246cd5a7554da5bba4e6805659d, type: 2}
@@ -1996,6 +2008,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1732441390552402, guid: 3933b246cd5a7554da5bba4e6805659d, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3933b246cd5a7554da5bba4e6805659d, type: 2}
   m_IsPrefabParent: 0
@@ -2436,6 +2452,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1732441390552402, guid: 3933b246cd5a7554da5bba4e6805659d, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3933b246cd5a7554da5bba4e6805659d, type: 2}
   m_IsPrefabParent: 0
@@ -2450,7 +2470,7 @@ GameObject:
   - component: {fileID: 1153982085}
   - component: {fileID: 1153982084}
   - component: {fileID: 1153982083}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere (8)
   m_TagString: Number
   m_Icon: {fileID: 0}
@@ -2564,6 +2584,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1732441390552402, guid: 3933b246cd5a7554da5bba4e6805659d, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3933b246cd5a7554da5bba4e6805659d, type: 2}
   m_IsPrefabParent: 0
@@ -2612,7 +2636,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 8200000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_Volume
-      value: 0.391
+      value: 0.013
       objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: near clip plane
@@ -2664,6 +2688,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 33220795356243468, guid: c53b6db2fe4c39a429fa69f73245a59d,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c53b6db2fe4c39a429fa69f73245a59d, type: 2}
   m_IsPrefabParent: 0
@@ -2705,6 +2734,10 @@ Prefab:
     - target: {fileID: 4532959922948802, guid: 3933b246cd5a7554da5bba4e6805659d, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732441390552402, guid: 3933b246cd5a7554da5bba4e6805659d, type: 2}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3933b246cd5a7554da5bba4e6805659d, type: 2}
@@ -2807,7 +2840,7 @@ GameObject:
   - component: {fileID: 1318803466}
   - component: {fileID: 1318803465}
   - component: {fileID: 1318803464}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere (15)
   m_TagString: Apartment
   m_Icon: {fileID: 0}
@@ -2921,6 +2954,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1732441390552402, guid: 3933b246cd5a7554da5bba4e6805659d, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3933b246cd5a7554da5bba4e6805659d, type: 2}
   m_IsPrefabParent: 0
@@ -3024,6 +3061,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 1732441390552402, guid: 3933b246cd5a7554da5bba4e6805659d, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3933b246cd5a7554da5bba4e6805659d, type: 2}
   m_IsPrefabParent: 0
@@ -3065,6 +3106,10 @@ Prefab:
     - target: {fileID: 4532959922948802, guid: 3933b246cd5a7554da5bba4e6805659d, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732441390552402, guid: 3933b246cd5a7554da5bba4e6805659d, type: 2}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3933b246cd5a7554da5bba4e6805659d, type: 2}
@@ -3146,6 +3191,7 @@ GameObject:
   - component: {fileID: 1565244123}
   - component: {fileID: 1565244122}
   - component: {fileID: 1565244121}
+  - component: {fileID: 1565244124}
   m_Layer: 0
   m_Name: Key
   m_TagString: Untagged
@@ -3223,7 +3269,21 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 1227775388}
   m_GameObject: {fileID: 1565244119}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1565244124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1565244119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7945e2d7ebaec544ea9d8eeb68d5a2e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keys:
+  - {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1679701052
 GameObject:
   m_ObjectHideFlags: 0
@@ -3235,7 +3295,7 @@ GameObject:
   - component: {fileID: 1679701055}
   - component: {fileID: 1679701054}
   - component: {fileID: 1679701053}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere (14)
   m_TagString: Apartment
   m_Icon: {fileID: 0}
@@ -3377,7 +3437,7 @@ GameObject:
   - component: {fileID: 1766385395}
   - component: {fileID: 1766385394}
   - component: {fileID: 1766385393}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere (7)
   m_TagString: Number
   m_Icon: {fileID: 0}
@@ -3609,6 +3669,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1732441390552402, guid: 3933b246cd5a7554da5bba4e6805659d, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3933b246cd5a7554da5bba4e6805659d, type: 2}
   m_IsPrefabParent: 0
@@ -3679,7 +3743,7 @@ GameObject:
   - component: {fileID: 2034146512}
   - component: {fileID: 2034146511}
   - component: {fileID: 2034146510}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere (13)
   m_TagString: House
   m_Icon: {fileID: 0}
