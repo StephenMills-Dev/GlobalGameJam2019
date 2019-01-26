@@ -47,21 +47,23 @@ public class ClueLogic : MonoBehaviour {
                 break;
         }
         GameObject[] possibleValues = GameObject.FindGameObjectsWithTag(value);
-        if(possibleValues != null)
-        foreach(GameObject clue in possibleValues)
+        if (possibleValues.Length != 0)
         {
-            clue.transform.GetChild(0).gameObject.SetActive(true);
+            foreach (GameObject clue in possibleValues)
+            {
+                clue.transform.GetChild(0).gameObject.SetActive(true);
+            }
         }
         else
         {
-            if(type == 1)
+            if (type == 1)
             {
                 possibleValues = GameObject.FindGameObjectsWithTag("Red");
                 foreach (GameObject clue in possibleValues)
                 {
-                    Color color = new Color(1,1,1);
+                    Color color = new Color(1, 1, 1);
                     Debug.Log("uh oh");
-                    switch(value)
+                    switch (value)
                     {
                         case "Blue":
                             color = Color.blue;
