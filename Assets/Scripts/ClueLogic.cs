@@ -32,7 +32,7 @@ public class ClueLogic : MonoBehaviour {
         switch(type)
         {
             case 0:
-                value = "Number";
+                value = "Finish";
                 break;
             case 1:
                 value = targetHome._colour;
@@ -47,8 +47,13 @@ public class ClueLogic : MonoBehaviour {
                 break;
         }
         GameObject[] possibleValues = GameObject.FindGameObjectsWithTag(value);
-        GameObject clue = possibleValues[UnityEngine.Random.Range(0, possibleValues.Length)];
-        clue.transform.GetChild(0).gameObject.SetActive(true);
+        if(possibleValues != null)
+        foreach(GameObject clue in possibleValues)
+        {
+            clue.transform.GetChild(0).gameObject.SetActive(true);
+        }
+        //GameObject clue = possibleValues[UnityEngine.Random.Range(0, possibleValues.Length)];
+      
         
 
     }
