@@ -174,10 +174,10 @@ public class ClueLogic : MonoBehaviour {
                     case "Yellow":
                         colorChoice = 10;
                         break;
-                    case "Black":
+                    case "White":
                         colorChoice = 14;
                         break;
-                    case "White":
+                    case "Black":
                         colorChoice = 18;
                         break;
                 }
