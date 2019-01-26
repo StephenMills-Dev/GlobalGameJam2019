@@ -17,7 +17,7 @@ public class ClueLogic : MonoBehaviour {
         targetHome = possibleHomes[homeChoice].GetComponent<Home>();
         if (targetHome != null)
         {
-            FindClue(0);
+            FindNumber();
             FindColor();
             FindClue(2);
             chosen = true;
@@ -32,9 +32,7 @@ public class ClueLogic : MonoBehaviour {
         string value = "";
         switch(type)
         {
-            case 0:
-                value = "Finish";
-                break;
+
             case 1:
                 value = targetHome._colour;
                 Debug.Log(value);
@@ -108,11 +106,28 @@ public class ClueLogic : MonoBehaviour {
     {
     }
 
+    private void FindNumber()
+    {
+        GameObject[] numbers = GameObject.FindGameObjectsWithTag("Number");
+        int[] randomChoices = new int[2];
+        for (int i = 0; i < randomChoices.Length; i++)
+        {
+            randomChoices[i] = Random.Range(0, numbers.Length);
+            numbers[randomChoices[i]].GetComponent<Number>().value = targetHome.Number;
+            numbers[randomChoices[i]].transform.GetChild(0).gameObject.SetActive(true);
+        }
+        foreach (GameObject g in numbers)
+        {
+            int nChoice = Random.Range(1, 100);
+            if(g.GetComponent<Number>().value != targetHome.Number)
+            g.GetComponent<Number>().value = nChoice;
+        }
+    }
+
     // Update is called once per frame
     void Update () {
         if (targetHome != null && !chosen)
         {
-            FindClue(0);
             FindClue(2);
             chosen = true;
         }

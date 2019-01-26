@@ -81,6 +81,24 @@ public class clueCamera : MonoBehaviour
                     key.GetComponent<MeshFilter>().sharedMesh = key.GetComponent<keyMeshes>().keys[0];
                     else
                         key.GetComponent<MeshFilter>().sharedMesh = key.GetComponent<keyMeshes>().keys[1];
+                    GameObject[] possibleValues = GameObject.FindGameObjectsWithTag(clueController.targetHome._size);
+                    foreach (GameObject g in possibleValues)
+                    {
+                        g.transform.GetChild(0).gameObject.SetActive(false);
+                    }
+                }
+                else if (hit.transform.gameObject.tag == "Number")
+                {
+                    if (clueController.targetHome.Number == hit.transform.gameObject.GetComponent<Number>().value)
+                    {
+                        key.GetComponent<keyMeshes>().numbertxt = clueController.targetHome.Number.ToString();
+                        GameObject[] possibleValues = GameObject.FindGameObjectsWithTag("Number");
+                        foreach (GameObject g in possibleValues)
+                        {
+                            if(g.GetComponent<Number>().value == clueController.targetHome.Number)
+                            g.transform.GetChild(0).gameObject.SetActive(false);
+                        }
+                    }
                 }
             }
             else

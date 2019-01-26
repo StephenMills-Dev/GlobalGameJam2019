@@ -3,19 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class keyMeshes : MonoBehaviour {
-
-    public Mesh[] keys;
-    public string numbertxt;
+public class Number : MonoBehaviour {
+    public int value;
     [SerializeField]
-    TextMeshProUGUI txtmsh;
+    TextMeshProUGUI tmp;
 	// Use this for initialization
 	void Start () {
-        txtmsh.text = numbertxt;
+        tmp.text = value.ToString();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        txtmsh.text = numbertxt;
+        tmp.text = value.ToString();
     }
 }
