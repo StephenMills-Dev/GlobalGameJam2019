@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +8,7 @@ public class ClueLogic : MonoBehaviour {
     public Home targetHome;
     GameObject[] possibleHomes;
     bool chosen = false;
+    public Color[] _types;
 
     // Use this for initialization
     void Start () {
@@ -17,7 +18,7 @@ public class ClueLogic : MonoBehaviour {
         if (targetHome != null)
         {
             FindClue(0);
-            FindClue(1);
+            FindColor();
             FindClue(2);
             chosen = true;
         }
@@ -112,7 +113,6 @@ public class ClueLogic : MonoBehaviour {
         if (targetHome != null && !chosen)
         {
             FindClue(0);
-            FindClue(1);
             FindClue(2);
             chosen = true;
         }
@@ -121,7 +121,80 @@ public class ClueLogic : MonoBehaviour {
 
     void FindColor()
     {
+        GameObject[] colorObjects = GameObject.FindGameObjectsWithTag("Color");
+        int[] clues = new int[4];
+        for(int i = 0; i < clues.Length;i++)
+        {
+            clues[i] = Random.Range(0, colorObjects.Length);
+            colorObjects[clues[i]].tag = targetHome._colour;
+            colorObjects[clues[i]].transform.GetChild(0).gameObject.SetActive(true);
+        }
+        foreach (GameObject g in colorObjects)
+        {
+            int colorChoice = Random.Range(0, 20);
+            if(g.tag != targetHome._colour)
+            switch (colorChoice)
+            {
+                case 0:
+                    g.gameObject.tag = "Red";
+                    break;
+                case 3:
+                    g.gameObject.tag = "Green";
+                    break;
+                case 7:
+                    g.gameObject.tag = "Blue";
+                    break;
+                case 10:
+                    g.gameObject.tag = "Yellow";
+                    break;
+                case 14:
+                    g.gameObject.tag = "White";
+                    break;
+                case 18:
+                    g.gameObject.tag = "Black";
+                    break;
+                default:
+                    g.gameObject.tag = "Color";
+                    break;
 
+            }
+            else
+            {
+                switch(targetHome._colour)
+                {
+                    case "Red":
+                        colorChoice = 0;
+                        break;
+                    case "Blue":
+                        colorChoice = 3;
+                        break;
+                    case "Green":
+                        colorChoice = 7;
+                        break;
+                    case "Yellow":
+                        colorChoice = 10;
+                        break;
+                    case "Black":
+                        colorChoice = 14;
+                        break;
+                    case "White":
+                        colorChoice = 18;
+                        break;
+                }
+            }
+
+
+            //Fetch the Renderer from the GameObject
+            Renderer rend = g.GetComponent<Renderer>();
+
+            //Set the main Color of the Material to green
+            rend.material.shader = Shader.Find("_Color");
+            rend.material.SetColor("_Color", _types[colorChoice]);
+
+            //Find the Specular shader and change its Color to red
+            rend.material.shader = Shader.Find("Specular");
+            rend.material.SetColor("_SpecColor", Color.black);
+        }
     }
 
 }
