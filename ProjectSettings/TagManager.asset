@@ -16,6 +16,7 @@ TagManager:
   - House
   - Apartment
   - Home
+  - Color
   layers:
   - Default
   - TransparentFX
