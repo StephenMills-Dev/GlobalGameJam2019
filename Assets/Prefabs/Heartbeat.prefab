@@ -160,7 +160,7 @@ AudioSource:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 1
+      time: 0.620697
       value: 0
       inSlope: -0.028582849
       outSlope: -0.028582849

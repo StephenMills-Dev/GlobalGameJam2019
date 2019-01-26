@@ -8,7 +8,8 @@ public class ColorPicker : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        int colorChoice = Random.Range(0, 21);
+        int colorChoice = Random.Range(0, 20);
+
 
         switch(colorChoice)
         {
@@ -46,7 +47,7 @@ public class ColorPicker : MonoBehaviour {
 
         //Find the Specular shader and change its Color to red
         rend.material.shader = Shader.Find("Specular");
-        rend.material.SetColor("_SpecColor", Color.white);
+        rend.material.SetColor("_SpecColor", Color.black);
     }
 
     // Update is called once per frame
