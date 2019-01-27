@@ -9,6 +9,9 @@ public class ClueLogic : MonoBehaviour {
     GameObject[] possibleHomes;
     bool chosen = false;
     public Color[] _types;
+    public bool colourFound;
+    public bool sizeFound;
+    public bool numberFound;
 
     // Use this for initialization
     void Start () {
@@ -126,10 +129,9 @@ public class ClueLogic : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (targetHome != null && !chosen)
+        if(numberFound && colourFound && sizeFound)
         {
-            FindClue(2);
-            chosen = true;
+            targetHome.hbeat.SetActive(true);
         }
 
     }
