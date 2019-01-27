@@ -685,6 +685,7 @@ MonoBehaviour:
   _size: 
   Location: 
   hbeat: {fileID: 1928341357793354}
+  House: {fileID: 1671302966111920}
 --- !u!135 &135476279647133176
 SphereCollider:
   m_ObjectHideFlags: 1
