@@ -24,6 +24,7 @@ public class Home : MonoBehaviour {
     public int Number;
     public string _size;
     public string Location;
+    public GameObject hbeat;
 
     private void Start()
     {

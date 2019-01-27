@@ -25,9 +25,9 @@ public class clueCamera : MonoBehaviour
         {
             RaycastHit hit;
             // Does the ray intersect any objects excluding the player layer
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 10f, layerMask))
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 12f, layerMask))
             {
-                if (hit.transform.gameObject.tag == clueController.targetHome._colour)
+                if (hit.transform.gameObject.tag == clueController.targetHome._colour && !clueController.colourFound)
                 {
                     Color c = new Color(1, 1, 1);
                     switch (clueController.targetHome._colour)
@@ -73,9 +73,9 @@ public class clueCamera : MonoBehaviour
                     {
                         g.transform.GetChild(0).gameObject.SetActive(false);
                     }
-
+                    clueController.colourFound = true;
                 }
-                else if (hit.transform.gameObject.tag == clueController.targetHome._size)
+                else if (hit.transform.gameObject.tag == clueController.targetHome._size && !clueController.sizeFound)
                 {
                     if(clueController.targetHome._size == "House")
                     key.GetComponent<MeshFilter>().sharedMesh = key.GetComponent<keyMeshes>().keys[0];
@@ -86,8 +86,9 @@ public class clueCamera : MonoBehaviour
                     {
                         g.transform.GetChild(0).gameObject.SetActive(false);
                     }
+                    clueController.sizeFound = true;
                 }
-                else if (hit.transform.gameObject.tag == "Number")
+                else if (hit.transform.gameObject.tag == "Number" && clueController.numberFound != true)
                 {
                     if (clueController.targetHome.Number == hit.transform.gameObject.GetComponent<Number>().value)
                     {
@@ -98,7 +99,12 @@ public class clueCamera : MonoBehaviour
                             if(g.GetComponent<Number>().value == clueController.targetHome.Number)
                             g.transform.GetChild(0).gameObject.SetActive(false);
                         }
+                        clueController.numberFound = true;
                     }
+                }
+                else if (hit.transform.gameObject.tag == "Home" && hit.transform.gameObject.GetComponent<Home>().hbeat.active && clueController.allClues)
+                {
+                    clueController.GetComponent<AudioSource>().Play();
                 }
             }
             else
