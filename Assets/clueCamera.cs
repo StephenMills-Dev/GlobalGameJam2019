@@ -113,6 +113,14 @@ public class clueCamera : MonoBehaviour
                 Debug.Log("Did not Hit");
             }
             }
+        if(Input.GetButtonDown("Fire2"))
+        {
+            GetComponent<Animator>().Play("camera equip");
         }
+        if (Input.GetButtonUp("Fire2"))
+        {
+            GetComponent<Animator>().Play("camera unequip");
+        }
+    }
     }
 
