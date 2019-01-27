@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ClueLogic : MonoBehaviour {
 
@@ -136,7 +137,10 @@ public class ClueLogic : MonoBehaviour {
             targetHome.hbeat.SetActive(true);
             allClues = true;
         }
-
+        if(Input.GetButtonDown("Cancel"))
+        {
+            Application.Quit();
+        }
     }
 
     void FindColor()
