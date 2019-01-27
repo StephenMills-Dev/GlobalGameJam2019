@@ -12,6 +12,8 @@ public class ClueLogic : MonoBehaviour {
     public bool colourFound;
     public bool sizeFound;
     public bool numberFound;
+    public bool allClues;
+    public AudioClip win;
 
     // Use this for initialization
     void Start () {
@@ -132,6 +134,7 @@ public class ClueLogic : MonoBehaviour {
         if(numberFound && colourFound && sizeFound)
         {
             targetHome.hbeat.SetActive(true);
+            allClues = true;
         }
 
     }
