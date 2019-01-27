@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class clueCamera : MonoBehaviour
 {
@@ -114,7 +115,7 @@ public class clueCamera : MonoBehaviour
                 }
                 else if (hit.transform.gameObject.tag == "Home" && hit.transform.gameObject.GetComponent<Home>().hbeat.active && clueController.allClues)
                 {
-                    clueController.GetComponent<AudioSource>().Play();
+                    SceneManager.LoadScene("Win");
                 }
             }
             else
