@@ -5,7 +5,7 @@ using TMPro;
 
 public class keyMeshes : MonoBehaviour {
 
-    public Mesh[] keys;
+    public GameObject[] keys;
     public string numbertxt;
     [SerializeField]
     TextMeshProUGUI txtmsh;

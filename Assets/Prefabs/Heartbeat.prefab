@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4532959922948802}
   - component: {fileID: 33077847126558132}
   - component: {fileID: 23715214100980430}
-  - component: {fileID: 135129149590223976}
   - component: {fileID: 82750318028107144}
   m_Layer: 0
   m_Name: Heartbeat
@@ -216,15 +215,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!135 &135129149590223976
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1732441390552402}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}

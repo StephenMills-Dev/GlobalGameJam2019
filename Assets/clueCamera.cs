@@ -57,16 +57,25 @@ public class clueCamera : MonoBehaviour
 
                     Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
                     Debug.Log("We did it");
+                    Renderer[] renderers =
+                        {
+                        key.GetComponent<Renderer>(),
+                        key.GetComponent<keyMeshes>().keys[0].transform.GetChild(0).GetComponent<Renderer>(),
+                        key.GetComponent<keyMeshes>().keys[1].gameObject.GetComponent<Renderer>()
+                        };
                     //Fetch the Renderer from the GameObject
-                    Renderer rend = key.GetComponent<Renderer>();
 
-                    //Set the main Color of the Material to green
-                    rend.material.shader = Shader.Find("_Color");
-                    rend.material.SetColor("_Color", c);
 
-                    //Find the Specular shader and change its Color to red
-                    rend.material.shader = Shader.Find("Specular");
-                    rend.material.SetColor("_SpecColor", Color.black);
+                    foreach (Renderer rend in renderers)
+                    {
+                        //Set the main Color of the Material to green
+                        rend.material.shader = Shader.Find("_Color");
+                        rend.material.SetColor("_Color", c);
+
+                        //Find the Specular shader and change its Color to red
+                        rend.material.shader = Shader.Find("Specular");
+                        rend.material.SetColor("_SpecColor", Color.black);
+                    }
 
                     GameObject[] possibleValues = GameObject.FindGameObjectsWithTag(clueController.targetHome._colour);
                     foreach(GameObject g in possibleValues)
@@ -77,10 +86,11 @@ public class clueCamera : MonoBehaviour
                 }
                 else if (hit.transform.gameObject.tag == clueController.targetHome._size && !clueController.sizeFound)
                 {
+                    key.GetComponent<MeshRenderer>().enabled = false;
                     if(clueController.targetHome._size == "House")
-                    key.GetComponent<MeshFilter>().sharedMesh = key.GetComponent<keyMeshes>().keys[0];
+                    key.GetComponent<keyMeshes>().keys[0].SetActive(true);
                     else
-                        key.GetComponent<MeshFilter>().sharedMesh = key.GetComponent<keyMeshes>().keys[1];
+                        key.GetComponent<keyMeshes>().keys[1].SetActive(true);
                     GameObject[] possibleValues = GameObject.FindGameObjectsWithTag(clueController.targetHome._size);
                     foreach (GameObject g in possibleValues)
                     {
