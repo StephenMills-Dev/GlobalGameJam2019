@@ -12,5 +12,10 @@ public class SceneTransition : MonoBehaviour {
         {
             SceneManager.LoadScene(sceneToChangeTo);
         }
-;    }
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
