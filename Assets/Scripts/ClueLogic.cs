@@ -22,8 +22,8 @@ public class ClueLogic : MonoBehaviour {
         targetHome = possibleHomes[homeChoice].GetComponent<Home>();
         if (targetHome != null)
         {
-            FindNumber();
             FindColor();
+            FindNumber(); 
             FindClue(2);
             chosen = true;
         }
